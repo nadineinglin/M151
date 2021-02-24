@@ -5,6 +5,4 @@
     $y= $_GET['y'];
     $state = $_GET['state'];
 
-
-    }
 ?>
