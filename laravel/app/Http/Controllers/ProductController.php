@@ -12,4 +12,10 @@ class ProductController extends Controller
         return view('products',['products'=>$products]);
         die();
     }
+
+    public function detail($id) {
+        
+        $product = \App\Models\Product::all()->where('id', $id)->first();
+        return view('detail',['p'=>$product]);
+    }
 }

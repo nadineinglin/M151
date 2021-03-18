@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Alle Produkte</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <tr>
             <td>{{ $product->name }}</td>
             <td>{{ $product->price }}</td>
-            <td><a href="/product/{{ $product->id }}">Link</a></td>
+            <td><a href="/product/{{ $product->id }}">Detailansicht</a></td>
         </tr>
     @endforeach
 </table>
