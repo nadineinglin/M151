@@ -11,15 +11,26 @@ class UsersController extends Controller
         return view('register');
     }
 
-    public function registpost()
+    /*public function registpost()
     {
         $this->validate(request(),[
             'email'=> 'required | email',
             'password'=>'required'
         ]);
 
-        $user= User::register(request([email,password]));
+        $users= User::register(request([email,password]));
         auth()->login($user);
         return redirect()->to('/newuser');
+    }
+    */
+
+    public function login(){
+        
+        
+    }
+
+    public function getlogin()
+    {
+        return View::make('login');
     }
 }
