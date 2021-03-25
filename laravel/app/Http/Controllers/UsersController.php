@@ -8,7 +8,21 @@ class UsersController extends Controller
 {
     public function register()
     {
+        $request = request();
+        $user =new \App\Models\Users;
+
+
+        $user->email=$request->email;
+        $user->password=$request->password;
+        $user->first_name=$request->name;
+
+        $user->save();
+
+       
+    
         return view('register');
+
+  
     }
 
     /*public function registpost()
@@ -24,13 +38,15 @@ class UsersController extends Controller
     }
     */
 
-    public function login(){
-        
-        
-    }
+    public function login(){}
 
     public function getlogin()
     {
-        return View::make('login');
+        return view('login');
+    }
+
+public function allowuser()
+    {
+        return view('register');
     }
 }

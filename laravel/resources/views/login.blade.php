@@ -8,11 +8,21 @@
     <title>Login</title>
 </head>
 <body>
-    {{Form::open('url'=>'getlogin')}}
     <h1>Login</h1>
-    <p>
-        {{$errors->first('email');}}
-        {{$errors ->first('password')}}
-    </p>
+    <form action="/user/{id}" method="post">
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email" id="mail">
+        <br>
+        <label for="password">Passwort</label>
+        <br>
+        <input type="password" name="password">
+        <br>
+        <input type="submit" value="Einloggen">
+    </form>
+
+    <p>Noch kein Konto?</p>
+    <button href="/register">Registrieren</button>
+
 </body>
 </html>

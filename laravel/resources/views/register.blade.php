@@ -9,7 +9,15 @@
 </head>
 <body>
     <h1>Registrieren</h1>
-    <form method="POST" action="/newuser"> 
+    <form method="get" action=""> 
+        <label for="name">Vorname</label>
+        <br>
+        <input type="text" name="first_name">
+        <br>
+        <label for="lastname">Nachname</label>
+        <br>
+        <input type="text"name="last_name">
+        <br>
         <label for="email">Email</label>
         <br>
         <input type="email" name="email">
@@ -18,6 +26,21 @@
         <br>
         <input type="password" name="password">
         <br>
+        <label for="street">Strasse</label>
+        <br>
+        <input type="text" name="street">
+        <br>
+        <label for="zip">PLZ</label>
+        <br>
+        <input type="text" name="zip" >
+        <br>
+        <label for="city">Ort</label>
+        <br>
+        <input type="text" name="city">
+        <br>
+        <label for="phone">Telefon Nr.</label>
+        <br>
+        <input type="text" name="phone">
         <br>
         <button type="submit">Registrieren</button>
     </form>
