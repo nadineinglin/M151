@@ -10,7 +10,6 @@ class ProductController extends Controller
     {
         $products =\App\Models\Product::all();
         return view('products',['products'=>$products]);
-        die();
     }
 
     public function detail($id) {
@@ -19,3 +18,5 @@ class ProductController extends Controller
         return view('detail',['p'=>$product]);
     }
 }
+
+?>
