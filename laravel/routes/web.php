@@ -21,8 +21,9 @@ Route::get('/products',[App\Http\Controllers\ProductController::class,'list']);
 Route::get('/product/{id}', [\App\Http\Controllers\ProductController::class, 'detail']);
 
 Route::match(['get', 'post'], '/newuser',[\App\Http\Controllers\UsersController::class,'register']);
+Route::match(['get','post'],'/login',[\App\Http\Controllers\UsersController::class,'login']);
 
-Route::post('/login',[\App\Http\Controllers\UsersController::class,'login']);
-Route::get('/login',[\App\Http\Controllers\UsersController::class,'getlogin']);
+Route::get('/basket',[App\Http\Controllers\OrderItemsController::class,'basket']);
 
 
+Route::get('/addToBasket/{id}',[App\Http\Controllers\OrderItemsController::class,'addtobasket']);
